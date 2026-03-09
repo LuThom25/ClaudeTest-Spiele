@@ -26,6 +26,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | `hilldrive`      | Hilldrive-Projekt             |
 | `shooterhtml`    | ShooterHTML-Projekt           |
 | `tictactoehtml`  | TicTacToeHTML-Projekt         |
+| `matrix`         | Matrix C++-Projekt            |
 
 - `main` ist **kein Arbeits-Branch** — nur Übersicht.
 - Änderungen an einem Spiel **immer im zugehörigen Branch** durchführen.
@@ -58,6 +59,14 @@ open tictactoe.html
 ```
 Single-file games work directly from the filesystem.
 
+**To run Matrix (Branch `matrix`, C++ CLI project):**
+```bash
+cd matrix
+make
+./matrix
+```
+Requires a C++ compiler (g++ or clang++). Interactive console menu.
+
 ---
 
 ## Architecture
@@ -86,3 +95,17 @@ main.js (game loop + state machine)
 - Entities spawn lazily alongside terrain via `entities.spawnUpTo(maxX, terrain)`
 - State machine lives in `main.js` as a string: `'menu'` | `'playing'` | `'gameover'`
 - Physics constants (SPRING_K, GRAVITY, ENGINE_FORCE, etc.) are at the top of `vehicle.js`
+
+### Matrix (`matrix/`)
+C++ CLI-Projekt mit interaktivem Menü. Kein Browser, kein Server.
+
+**Struktur:**
+```
+matrix/
+  ├── include/Matrix.h   → Klassendeklaration
+  ├── src/Matrix.cpp     → Implementierung (alle Operationen)
+  ├── src/main.cpp       → Interaktives Konsolenmenü
+  └── Makefile           → Build-System
+```
+
+**Unterstützte Operationen:** Addition, Subtraktion, Multiplikation, Transposition, Determinante (rekursiv), Inverse (Gauß-Jordan).

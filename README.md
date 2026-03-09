@@ -1,7 +1,7 @@
 # ClaudeTest-Spiele
 
-Sammlung von drei Browser-Spielen, entwickelt mit Vanilla JS, HTML und Canvas.
-Kein Build-Schritt, keine Abhängigkeiten.
+Sammlung von Browser-Spielen und C++-Projekten, entwickelt mit Vanilla JS, HTML, Canvas und C++.
+Kein Build-Schritt für die Browser-Spiele, keine externen Abhängigkeiten.
 
 ---
 
@@ -20,13 +20,18 @@ Direkt im Browser öffenbar, kein Server nötig.
 Klassisches Tic-Tac-Toe als einzelne HTML-Datei.
 Direkt im Browser öffenbar, kein Server nötig.
 
+### Matrix — Branch `matrix`
+C++-Projekt mit vollständiger Matrix-Klasse (Addition, Subtraktion, Multiplikation, Transposition, Determinante, Inverse).
+Interaktives Konsolenmenü. Kompilierung per `make`.
+
 ---
 
 ## Branch-Übersicht
 
-| Branch           | Inhalt         |
-|------------------|----------------|
+| Branch           | Inhalt          |
+|------------------|-----------------|
 | `main`           | Diese Übersicht |
 | `hilldrive`      | Hilldrive-Spiel |
 | `shooterhtml`    | ShooterHTML     |
 | `tictactoehtml`  | TicTacToeHTML   |
+| `matrix`         | Matrix C++-Projekt |
