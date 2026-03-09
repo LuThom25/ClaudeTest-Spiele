@@ -23,8 +23,8 @@ int main() {
                   << "Auswahl: ";
 
         int choice;
-        std::cin >> choice;
-        if (std::cin.fail()) {
+        if (!(std::cin >> choice)) {
+            if (std::cin.eof()) break;  // Pipe/Datei-Ende → sauber beenden
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Ungültige Eingabe.\n";
